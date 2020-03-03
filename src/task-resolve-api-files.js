@@ -18,9 +18,9 @@ function taskResolveApiFiles() {
     ${imports}
     
 
-    export function configureApi(app: Express) {
-    ${uses}
-    }`
+export function configureApi(app: Express) {
+${uses}
+}`
     
 
     function format(s) {
