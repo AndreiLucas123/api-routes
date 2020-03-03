@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "",
   "main": "src/api/index.js",
+  "bin": {
+    "apit": "src/api/index.js"
+  },
   "scripts": {
     "start": "node ."
   },
