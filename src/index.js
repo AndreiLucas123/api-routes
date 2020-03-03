@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 
 
-if (process.argv[2] === 'new' && process.argv[3]) {
-    require('./new-api-file')(process.argv[3])
+if (process.argv[2]) {
+    require('./new-api-file')(process.argv[2])
+    require('./task-resolve-api-files')()
 } else {
     require('./task-resolve-api-files')()
 }
