@@ -11,14 +11,13 @@ function taskResolveApiFiles() {
     
     
     const imports = fileArray.map((f, i) => `import { router as r${i} } from '${format(f)}'`).join('\n')
-    const uses = fileArray.map((f, i) => `    app.use('/${path.basename(f, '.ts')}', r${i});`).join('\n')
+    const uses = fileArray.map((f, i) => `  app.use('/${path.basename(f, '.ts')}', r${i});`).join('\n')
     
 
     const content = `import { Express } from 'express'
-    ${imports}
-    
+${imports}
 
-export function configureApi(app: Express) {
+export function useRoutes(app: Express) {
 ${uses}
 }`
     
