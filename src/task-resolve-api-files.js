@@ -7,7 +7,7 @@ const fs = require('fs')
  */
 function taskResolveApiFiles() {
     const fileArray = glob.sync('src/api/**/*.ts')
-        .filter(f => path.basename(f) !== 'index.ts')
+        .filter(f => path.basename(f) !== 'routes.ts')
     
     
     const imports = fileArray.map((f, i) => `import { router as r${i} } from '${format(f)}'`).join('\n')
@@ -28,7 +28,7 @@ ${uses}
     }
     
     
-    fs.writeFileSync('src/api/index.ts', content)
+    fs.writeFileSync('src/api/routes.ts', content)
     
     console.log('Task finished')
 }
