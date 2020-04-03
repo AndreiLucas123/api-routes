@@ -1,17 +1,17 @@
 {
-  "name": "api-task-resolver",
+  "name": "api-routes",
   "version": "0.1.0",
   "description": "",
   "main": "src/index.js",
   "bin": {
-    "apit": "src/index.js"
+    "apir": "src/index.js"
   },
   "scripts": {
     "start": "node ."
   },
   "keywords": [],
   "author": "Andrei Lucas Gonçalves",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "glob": "^7.1.6"
   }
