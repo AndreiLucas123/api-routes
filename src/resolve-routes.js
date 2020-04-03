@@ -50,7 +50,15 @@ function createFolder() {
   }
   if (!fs.existsSync('src/api')) {
     try {
-      fs.mkdirSync('src/api')
+			fs.mkdirSync('src/api')
+			const examplePath = 'src/api/example.ts'
+			fs.writeFileSync('src/api/example.ts', `import { Router } from 'express'
+export const router = Router()
+
+router.get('/', (req, res) => {
+		res.send('Hello World Example')
+})`)
+			console.log(`"${examplePath}" created`)
     } catch (err) {
       console.log(err)
     }
